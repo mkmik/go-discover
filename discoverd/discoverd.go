@@ -1,8 +1,9 @@
 package main
 
 import (
-	"log"
 	"flag"
+	"log"
+
 	"github.com/flynn/go-discover/discover"
 )
 
