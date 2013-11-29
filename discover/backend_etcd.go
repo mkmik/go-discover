@@ -95,7 +95,7 @@ func (b *EtcdBackend) responseToUpdate(resp *etcd.Response, kvp *etcd.KeyValuePa
 }
 
 func (b *EtcdBackend) getCurrentState(name string) (*etcd.Response, error) {
-	return b.Client.Get(servicePath(name, ""), true, false)
+	return b.Client.Get(servicePath(name, ""), false, true)
 }
 
 func (b *EtcdBackend) getStateChanges(name string, stop chan bool) chan *etcd.Response {
